@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    // Module
+    "module": "commonjs",
+    // Language and Environment
+    "target": "es2021",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    // Type Checking
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "strictNullChecks": false,
+    "strictBindCallApply": false,
+    "allowSyntheticDefaultImports": true,
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": false,
+
+    //
+    "allowJs": true
+  }
+}

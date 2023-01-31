@@ -1,0 +1,55 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["yarn.lock"],
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["../../tsconfig.json", "../../tsup.config.ts", "src/**/*.ts", "tsconfig.json", "tsup.config.ts"],
+      "outputs": ["dist/**"]
+    },
+    "build:affected": {
+      "dependsOn": ["^build"],
+      "inputs": ["../../tsconfig.json", "../../tsup.config.ts", "src/**/*.ts", "tsconfig.json", "tsup.config.ts"],
+      "outputs": ["dist/**"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["../../tsconfig.json", "src/**/*", "README.md", "jest.config.js", "tsconfig.json"],
+      "outputs": []
+    },
+    "test:cov": {
+      "dependsOn": ["^build"],
+      "inputs": ["../../tsconfig.json", "src/**/*", "README.md", "jest.config.js", "tsconfig.json"],
+      "outputs": ["coverage/**"]
+    },
+    "lint": {
+      "inputs": [
+        "../../.eslintrc.js",
+        "../../.prettierrc",
+        "../../tsconfig.json",
+        "../../tsconfig.build.json",
+        "src/**/*.ts",
+        ".eslintrc.js",
+        ".prettierignore",
+        ".prettierrc",
+        "tsconfig.json",
+        "tsconfig.build.json",
+        "tsup.config.ts"
+      ]
+    },
+    "format:check": {
+      "inputs": ["../../.prettierrc.json", "src/**/*.ts", ".prettierignore", ".prettierrc.js"]
+    },
+    "changelog": {
+      "outputs": ["CHANGELOG.md"]
+    },
+    "release": {
+      "inputs": ["CHANGELOG.md"],
+      "outputs": ["package.json", "CHANGELOG.md"]
+    }
+  }
+}

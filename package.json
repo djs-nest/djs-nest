@@ -1,0 +1,77 @@
+{
+  "name": "djs-nest",
+  "description": "Multiple modules for creating Discord bots with NestJS. Utilizing @discordjs/rest, @discordjs/core, @discordjs/ws",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "https://github.com/djs-nest/djs-nest.git",
+  "bugs": "https://github.com/djs-nest/djs-nest/issues",
+  "author": "iam10k",
+  "contributors": [],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "build:affected": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test --parallel",
+    "test:cov": "turbo run test:cov --parallel",
+    "test:packages:cov": "jest --coverage",
+    "lint": "turbo run lint --parallel",
+    "lint:fix": "turbo run lint:fix --parallel",
+    "lint:fix:affected": "turbo run format --filter='...[origin/main]' --parallel",
+    "format:check": "turbo run format:check --parallel",
+    "format": "turbo run format --parallel",
+    "format:affected": "turbo run format --filter='...[origin/main]' --parallel",
+    "prepublish": "turbo run lint format:check build test:cov",
+    "publish-packages": "turbo run changelog release --concurrency=1",
+    "postinstall": "husky install",
+    "update": "yarn upgrade-interactive"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-angular": "^17.4.2",
+    "@swc/core": "^1.3.31",
+    "git-cliff": "^1.1.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "latest",
+    "tsup": "^6.5.0",
+    "turbo": "latest",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=16.6.0"
+  },
+  "packageManager": "yarn@3.3.1",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "packages",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/src/**/*.ts"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      ".*/common/src/.*/dynamic-modules.ts$",
+      ".*/index.ts$"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 65,
+        "functions": 80,
+        "lines": 85,
+        "statements": 85
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+name: 'Upload Coverage'
+description: 'Uploads code coverage reports to codecov with separate flags for separate packages'
+runs:
+  using: 'composite'
+  steps:
+    - name: Upload Common Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./packages/common/coverage/coverage-final.json
+        flags: common
+
+    - name: Upload Core Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./packages/core/coverage/coverage-final.json
+        flags: core
+
+    - name: Upload Interaction Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./packages/interaction/coverage/coverage-final.json
+        flags: interaction
+
+    - name: Upload Middleware Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./packages/middleware/coverage/coverage-final.json
+        flags: middleware
+
+    - name: Upload Rest Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./packages/rest/coverage/coverage-final.json
+        flags: rest
