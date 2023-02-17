@@ -6,7 +6,7 @@
         <a href="https://discord.gg/djs"><img src="https://img.shields.io/discord/222078108977594368?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
 		<a href="https://www.npmjs.com/package/@djs-nest/core"><img src="https://img.shields.io/npm/v/@djs-nest/core.svg?maxAge=3600" alt="npm version" /></a>
 		<a href="https://www.npmjs.com/package/@djs-nest/core"><img src="https://img.shields.io/npm/dt/@djs-nest/core.svg?maxAge=3600" alt="npm downloads" /></a>
-		<a href="https://github.com/djs-nest/djs-nest/actions"><img src="https://github.com/djs-nest/djs-nest/actions/workflows/test.yml/badge.svg" alt="Tests status" /></a>
+		<a href="https://github.com/djs-nest/djs-nest/actions"><img src="https://github.com/djs-nest/djs-nest/actions/workflows/tests.yml/badge.svg" alt="Tests status" /></a>
 		<a href="https://codecov.io/gh/djs-nest/djs-nest" ><img src="https://codecov.io/gh/djs-nest/djs-nest/branch/main/graph/badge.svg?precision=2" alt="Code coverage" /></a>
 	</p>
     <a href="https://djs-nest.github.com/djs-nest">Documentation✨</a> &emsp; <a href="https://github.com/djs-nest/djs-nest">Source code ⌨️</a> &emsp; <a href="https://github.com/djs-nest/djs-nest/tree/main/apps/samples">Examples 🛠️</a> &emsp; <a href="https://discord.gg/mcBYvMTnwP">Community 💬</a>
