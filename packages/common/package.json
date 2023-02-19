@@ -43,7 +43,7 @@
   "devDependencies": {
     "@discordjs/core": "^0.3.0",
     "@favware/cliff-jumper": "^1.10.0",
-    "@nestjs/common": "^9.2.1",
+    "@nestjs/common": "^9.3.9",
     "@nestjs/core": "^9.2.1",
     "@nestjs/testing": "^9.0.0",
     "@types/jest": "28.1.8",
