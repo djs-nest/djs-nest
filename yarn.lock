@@ -425,12 +425,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-angular@npm:^17.4.2":
-  version: 17.4.2
-  resolution: "@commitlint/config-angular@npm:17.4.2"
+"@commitlint/config-angular@npm:^17.4.4":
+  version: 17.4.4
+  resolution: "@commitlint/config-angular@npm:17.4.4"
   dependencies:
     "@commitlint/config-angular-type-enum": ^17.4.0
-  checksum: 02ae25270613a767bf722bf62af1deb5e3b10cd397e2e4dbe7ab739742933d97e4374d95d697836e400c7247d9ab2e320ed53db98c39efccd363c7242d34d12e
+  checksum: 7dbb42097d7c4a7bc19fcdfc691702a239595c6119d1cee6d044dd61726a5e30c5c1e69380950c707726347ded4e40a19057b4878a1638bb9c48e84af6247b02
   languageName: node
   linkType: hard
 
@@ -2921,7 +2921,7 @@ __metadata:
   resolution: "djs-nest@workspace:."
   dependencies:
     "@commitlint/cli": ^17.4.2
-    "@commitlint/config-angular": ^17.4.2
+    "@commitlint/config-angular": ^17.4.4
     "@swc/core": ^1.3.31
     git-cliff: ^1.1.2
     husky: ^8.0.0
