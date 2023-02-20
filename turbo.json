@@ -46,6 +46,9 @@
     "format:check": {
       "inputs": ["../../.prettierrc.json", "src/**/*.ts", ".prettierignore", ".prettierrc.js"]
     },
+    "format": {
+      "inputs": ["../../.prettierrc.json", "src/**/*.ts", ".prettierignore", ".prettierrc.js"]
+    },
     "changelog": {
       "outputs": ["CHANGELOG.md"]
     },
