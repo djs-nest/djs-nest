@@ -4,7 +4,7 @@ import {
   createModuleConfigProvider,
   DJS_REST_MODULE_OPTIONS
 } from '@djs-nest/common';
-import { DynamicModule } from '@nestjs/common';
+import { DynamicModule, Global, Module } from '@nestjs/common';
 import { DjsApiProvider } from './djs-api.provider';
 import { DjsRestModuleOptions } from './djs-rest-options.interface';
 import { DjsRestProvider } from './djs-rest.provider';
@@ -14,6 +14,8 @@ const RestModuleProperties = {
   exports: [DjsRestProvider, DjsApiProvider]
 };
 
+@Global()
+@Module({})
 export class DjsRestModule extends createConfigurableDynamicRootModule() {
   static forRootAsync(asyncModuleConfig: AsyncModuleConfig<DjsRestModuleOptions>): DynamicModule {
     const dynamicModule = {

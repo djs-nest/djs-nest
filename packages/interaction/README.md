@@ -28,7 +28,7 @@ import { DjsInteractionModule } from '@djs-nest/interaction';
 import { Module } from '@nestjs/common';
 
 @Module({
-  imports: [DjsInteractionModule, DjsRestModule.forRoot({ token: 'token' })],
+  imports: [DjsRestModule.forRoot({ token: 'token' }), DjsInteractionModule],
   providers: []
 })
 export class MainModule {}

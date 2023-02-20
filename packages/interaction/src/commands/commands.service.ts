@@ -64,13 +64,14 @@ export class CommandsService implements OnApplicationBootstrap {
     this.logger.log(`Started updating application commands for ${commandsByGuildMap.size - 1} guilds and global commands`);
     for (const [guild, commands] of commandsByGuildMap) {
       if (guild !== undefined) {
+        this.logger.debug(`Updating application commands for guild ${guild}, ${commands.length} commands registered`);
         await api.applicationCommands.bulkOverwriteGuildCommands(
           this._applicationId,
           guild,
           commands.map(command => command.toJSON())
         );
       } else {
-        this.logger.log(`Updating global commands, new number of commands: ${commands.length}`);
+        this.logger.log(`Updating global commands, ${commands.length} global commands registered`);
         await api.applicationCommands.bulkOverwriteGlobalCommands(
           this._applicationId,
           commands.map(command => command.toJSON())

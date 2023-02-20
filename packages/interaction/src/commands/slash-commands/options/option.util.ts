@@ -3,10 +3,10 @@ import { DJS_OPTIONS_METADATA, OptionMeta } from '@djs-nest/common';
 
 export type BaseOptionMeta = APIApplicationCommandOptionBase<any>;
 
+export type OptionMetaOmit<T extends BaseOptionMeta> = Omit<T, 'type'>;
+
 export function createOptionDecorator<T extends BaseOptionMeta>(type: ApplicationCommandOptionType, resolver: OptionMeta['resolver']) {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  return (data: Omit<T, 'type'>): PropertyDecorator => {
+  return (data: OptionMetaOmit<T>): PropertyDecorator => {
     return (target: any, propertyKey: string | symbol) => {
       Reflect.defineProperty(target, propertyKey, {
         value: undefined,

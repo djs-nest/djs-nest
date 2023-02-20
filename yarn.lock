@@ -754,6 +754,7 @@ __metadata:
     "@discordjs/builders": ^1.4.0
     "@discordjs/core": ^0.3.0
     "@djs-nest/common": "workspace:^"
+    "@djs-nest/rest": "workspace:^"
     "@favware/cliff-jumper": ^1.10.0
     "@nestjs/common": ^9.3.9
     "@nestjs/core": ^9.2.1
