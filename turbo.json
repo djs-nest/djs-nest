@@ -39,7 +39,8 @@
         "tsconfig.json",
         "tsconfig.build.json",
         "tsup.config.ts"
-      ]
+      ],
+      "outputs": []
     },
     "format:check": {
       "inputs": ["../../.prettierrc.json", "src/**/*.ts", ".prettierignore", ".prettierrc.js"]

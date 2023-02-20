@@ -28,19 +28,19 @@ jobs:
 
       - name: ESLint (PR)
         if: ${{ github.event_name != 'push' }}
-        run: yarn lint --filter="...[origin/${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref || 'main' }}]" -- --format=compact
+        run: yarn lint --filter="...[origin/${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref || 'main' }}]"
 
       - name: ESLint (Push)
         if: ${{ github.event_name == 'push' }}
-        run: yarn lint --filter="...[HEAD^1]" -- --format=compact
+        run: yarn lint --filter="...[HEAD^1]"
 
       - name: Format (PR)
         if: ${{ github.event_name != 'push' }}
-        run: yarn format:check --filter="...[origin/${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref || 'main' }}]" -- --format=compact
+        run: yarn format:check --filter="...[origin/${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref || 'main' }}]"
 
       - name: Format (Push)
         if: ${{ github.event_name == 'push' }}
-        run: yarn format:check --filter="...[HEAD^1]" -- --format=compact
+        run: yarn format:check --filter="...[HEAD^1]"
 
       - name: Build dependencies (PR)
         if: ${{ github.event_name != 'push' }}
