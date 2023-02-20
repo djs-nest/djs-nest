@@ -1,6 +1,6 @@
 {
   "name": "@djs-nest/interaction",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Djs Nest Interaction Module provides a simple way to create and handle Discord interactions",
   "author": "iam10k",
   "license": "Apache-2.0",

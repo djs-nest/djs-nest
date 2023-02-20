@@ -1,6 +1,6 @@
 {
   "name": "@djs-nest/rest",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Djs Nest Rest Module provides a wrapper to the Discord.js REST and API client",
   "author": "iam10k",
   "license": "Apache-2.0",

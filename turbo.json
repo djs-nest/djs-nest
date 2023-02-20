@@ -6,6 +6,7 @@
       "cache": false,
       "persistent": true
     },
+    "prebuild": {},
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["../../tsconfig.json", "../../tsup.config.ts", "src/**/*.ts", "tsconfig.json", "tsup.config.ts"],
@@ -43,6 +44,9 @@
       "outputs": []
     },
     "format:check": {
+      "inputs": ["../../.prettierrc.json", "src/**/*.ts", ".prettierignore", ".prettierrc.js"]
+    },
+    "format": {
       "inputs": ["../../.prettierrc.json", "src/**/*.ts", ".prettierignore", ".prettierrc.js"]
     },
     "changelog": {

@@ -1,6 +1,6 @@
 {
   "name": "@djs-nest/core",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Djs Nest Core Module provides functionality for handling discord events",
   "author": "iam10k",
   "license": "Apache-2.0",
