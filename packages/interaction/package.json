@@ -40,7 +40,8 @@
     "release": "cliff-jumper"
   },
   "dependencies": {
-    "@djs-nest/common": "workspace:^"
+    "@djs-nest/common": "workspace:^",
+    "@djs-nest/rest": "workspace:^"
   },
   "peerDependencies": {
     "@discordjs/core": "^0.3.0",

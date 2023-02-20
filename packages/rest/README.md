@@ -75,4 +75,4 @@ export class MyService {
 
 View the [documentation][documentation] for all features and examples
 
-[documentation](https://djs-nest.github.io/djs-nest/)
+[documentation]: https://djs-nest.github.io/djs-nest/

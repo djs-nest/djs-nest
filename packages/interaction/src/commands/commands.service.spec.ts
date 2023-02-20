@@ -1,7 +1,9 @@
 import { ApplicationCommandType } from '@discordjs/core';
 import { DJS_INTERACTION_MODULE_OPTIONS, DjsApi, DjsCommonModule, ExplorerService, SlashCommandDiscovery } from '@djs-nest/common';
+import { DjsRestModule } from '@djs-nest/rest';
 import { DiscoveryModule } from '@nestjs/core';
 import { Test, TestingModule } from '@nestjs/testing';
+import { DjsInteractionModule } from '../djs-interaction.module';
 import { CommandsService } from './commands.service';
 import { ContextMenusService } from './context-menus';
 import { SlashCommandsService } from './slash-commands';
@@ -94,6 +96,59 @@ describe('CommandsService', () => {
     it('should register commands', async () => {
       await service.onApplicationBootstrap();
       expect(service.registerCommands).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('provided DjsRestModule', () => {
+    beforeEach(async () => {
+      await createMockDjs();
+
+      const module: TestingModule = await Test.createTestingModule({
+        imports: [
+          DjsCommonModule,
+          DjsRestModule.forRootAsync({ useFactory: () => ({ token: '' }) }),
+          DjsInteractionModule,
+          DiscoveryModule
+        ],
+        providers: [{ provide: DJS_INTERACTION_MODULE_OPTIONS, useValue: {} }]
+      }).compile();
+
+      await setup(module);
+
+      jest.spyOn(service, 'registerCommands');
+    });
+
+    it('should be defined', () => {
+      expect(service).toBeDefined();
+    });
+
+    it('should register commands', async () => {
+      await service.onApplicationBootstrap();
+      expect(service.registerCommands).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('no provided DjsRestModule', () => {
+    beforeEach(async () => {
+      await createMockDjs();
+
+      const module: TestingModule = await Test.createTestingModule({
+        imports: [DjsCommonModule, DjsInteractionModule, DiscoveryModule],
+        providers: [{ provide: DJS_INTERACTION_MODULE_OPTIONS, useValue: {} }]
+      }).compile();
+
+      await setup(module);
+
+      jest.spyOn(service, 'registerCommands');
+    });
+
+    it('should be defined', () => {
+      expect(service).toBeDefined();
+    });
+
+    it('should register commands', async () => {
+      await service.onApplicationBootstrap();
+      expect(service.registerCommands).not.toHaveBeenCalled();
     });
   });
 
