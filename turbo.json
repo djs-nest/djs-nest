@@ -6,6 +6,7 @@
       "cache": false,
       "persistent": true
     },
+    "prebuild": {},
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["../../tsconfig.json", "../../tsup.config.ts", "src/**/*.ts", "tsconfig.json", "tsup.config.ts"],
