@@ -3,7 +3,7 @@
     Rest module which provides a simple module for initializing the <a href="https://github.com/discordjs/discord.js/tree/main/packages/rest">@discordjs/rest</a> REST client and API from <a href="https://github.com/discordjs/discord.js/tree/main/packages/core">@discordjs/core</a>.
     <br/>
     <p>
-        <a href="https://discord.gg/djs"><img src="https://img.shields.io/discord/222078108977594368?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
+        <a href="https://discord.gg/ZTapEzyD6G"><img src="https://img.shields.io/discord/222078108977594368?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
 		<a href="https://www.npmjs.com/package/@djs-nest/rest"><img src="https://img.shields.io/npm/v/@djs-nest/rest.svg?maxAge=3600" alt="npm version" /></a>
 		<a href="https://www.npmjs.com/package/@djs-nest/rest"><img src="https://img.shields.io/npm/dt/@djs-nest/rest.svg?maxAge=3600" alt="npm downloads" /></a>
 		<a href="https://github.com/djs-nest/djs-nest/actions"><img src="https://github.com/djs-nest/djs-nest/actions/workflows/tests.yml/badge.svg" alt="Tests status" /></a>
