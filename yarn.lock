@@ -691,7 +691,7 @@ __metadata:
     "@discordjs/core": ^0.3.0
     "@favware/cliff-jumper": ^1.10.0
     "@nestjs/common": ^9.3.9
-    "@nestjs/core": ^9.2.1
+    "@nestjs/core": ^9.3.9
     "@nestjs/testing": ^9.3.9
     "@types/jest": 28.1.8
     "@types/node": ^18.14.0
@@ -724,7 +724,7 @@ __metadata:
     "@djs-nest/rest": "workspace:^"
     "@favware/cliff-jumper": ^1.10.0
     "@nestjs/common": ^9.3.9
-    "@nestjs/core": ^9.2.1
+    "@nestjs/core": ^9.3.9
     "@nestjs/testing": ^9.3.9
     "@types/jest": 28.1.8
     "@types/node": ^18.14.0
@@ -757,7 +757,7 @@ __metadata:
     "@djs-nest/rest": "workspace:^"
     "@favware/cliff-jumper": ^1.10.0
     "@nestjs/common": ^9.3.9
-    "@nestjs/core": ^9.2.1
+    "@nestjs/core": ^9.3.9
     "@nestjs/testing": ^9.3.9
     "@types/jest": 28.1.8
     "@types/node": ^18.14.0
@@ -788,7 +788,7 @@ __metadata:
     "@favware/cliff-jumper": ^1.10.0
     "@golevelup/ts-jest": ^0.3.4
     "@nestjs/common": ^9.3.9
-    "@nestjs/core": ^9.2.1
+    "@nestjs/core": ^9.3.9
     "@nestjs/testing": ^9.3.9
     "@types/express": ^4.17.17
     "@types/jest": 28.1.8
@@ -820,7 +820,7 @@ __metadata:
     "@djs-nest/common": "workspace:^"
     "@favware/cliff-jumper": ^1.10.0
     "@nestjs/common": ^9.3.9
-    "@nestjs/core": ^9.2.1
+    "@nestjs/core": ^9.3.9
     "@nestjs/testing": ^9.3.9
     "@types/jest": 28.1.8
     "@types/node": ^18.14.0
@@ -1451,17 +1451,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:^9.2.1":
-  version: 9.2.1
-  resolution: "@nestjs/core@npm:9.2.1"
+"@nestjs/core@npm:^9.3.9":
+  version: 9.3.9
+  resolution: "@nestjs/core@npm:9.3.9"
   dependencies:
     "@nuxtjs/opencollective": 0.3.2
     fast-safe-stringify: 2.1.1
     iterare: 1.2.1
-    object-hash: 3.0.0
     path-to-regexp: 3.2.0
-    tslib: 2.4.1
-    uuid: 9.0.0
+    tslib: 2.5.0
+    uid: 2.0.1
   peerDependencies:
     "@nestjs/common": ^9.0.0
     "@nestjs/microservices": ^9.0.0
@@ -1476,7 +1475,7 @@ __metadata:
       optional: true
     "@nestjs/websockets":
       optional: true
-  checksum: 006edefb175840f7706e3ae755dfd984e112d40fe3ce26bd75ee019652c38b5225c751617efaf6054b07ddb1f7e044f49015520889f0003aa9aab33111d59172
+  checksum: b2a29c8b61b8b7bbc8d883d4ff9aed80504e28c11bd627fccbeb11a7920559b8d885efecee4799c3bd9c2cd0224dd519c7b2dcdfa9f523855529143596e1837a
   languageName: node
   linkType: hard
 
@@ -5630,13 +5629,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-hash@npm:3.0.0":
-  version: 3.0.0
-  resolution: "object-hash@npm:3.0.0"
-  checksum: 80b4904bb3857c52cc1bfd0b52c0352532ca12ed3b8a6ff06a90cd209dfda1b95cee059a7625eb9da29537027f68ac4619363491eedb2f5d3dddbba97494fd6c
-  languageName: node
-  linkType: hard
-
 "object-inspect@npm:^1.12.2":
   version: 1.12.3
   resolution: "object-inspect@npm:1.12.3"
@@ -7177,15 +7169,6 @@ __metadata:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
-  languageName: node
-  linkType: hard
-
-"uuid@npm:9.0.0":
-  version: 9.0.0
-  resolution: "uuid@npm:9.0.0"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
   languageName: node
   linkType: hard
 

@@ -52,7 +52,7 @@
     "@discordjs/rest": "^1.5.0",
     "@favware/cliff-jumper": "^1.10.0",
     "@nestjs/common": "^9.3.9",
-    "@nestjs/core": "^9.2.1",
+    "@nestjs/core": "^9.3.9",
     "@nestjs/testing": "^9.3.9",
     "@types/jest": "28.1.8",
     "@types/node": "^18.14.0",
