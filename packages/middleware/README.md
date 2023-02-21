@@ -28,12 +28,12 @@ Setup controller:
 ```ts
 import { Body, Controller, Post } from '@nestjs/common';
 
-// import { BaseInteraction } from 'discord.js'; // optionally import base interaction type if you want to use it from discord.js
+// import { APIInteraction } from '@discordjs/core'; // optionally import base interaction type if you want to use it from discord.js
 
 @Controller('interaction')
 export class InteractionController {
   @Post('register')
-  interactionPost(@Body() interaction: any /*| BaseInteraction*/): any {
+  interactionPost(@Body() interaction: any /*APIInteraction*/): any {
     // Handle interaction here
   }
 }

@@ -82,6 +82,46 @@ class SlashCommandsSubGroupService {
 }
 ```
 
+### Handling Interactions via Gateway
+
+Handling interactions via the gateway can be done when using the core package, and calling the interaction service.
+
+```ts
+import { Injectable } from '@nestjs/common';
+import { InteractionService } from '@djs-nest/interaction';
+// import { APIInteraction } from '@discordjs/core'; // optionally import base interaction type if you want to use it from discord.js
+
+@Injectable()
+export class InteractionsEvents {
+  constructor(private interactionService: InteractionService) {}
+
+  @On(GatewayDispatchEvents.InteractionCreate)
+  async handleInteraction(@Body() body: any /*APIInteraction*/): any {
+    return this.interactionService.handleInteraction(body);
+  }
+}
+```
+
+### Handling Interactions via API
+
+Handling interactions via an API call can be done by calling the interaction service.
+
+```ts
+import { GatewayDispatchEvents } from '@discordjs/core';
+import { Body, Controller, Post } from '@nestjs/common';
+import { InteractionService } from '@djs-nest/interaction';
+
+@Controller('interactions')
+export class InteractionsController {
+  constructor(private interactionService: InteractionService) {}
+
+  @Post()
+  async handleInteraction(@Body() body: any /*APIInteraction*/): any {
+    return this.interactionService.handleInteraction(body);
+  }
+}
+```
+
 ### Other Features
 
 View the [documentation][documentation] for all features and examples
