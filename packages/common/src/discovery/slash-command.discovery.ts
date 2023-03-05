@@ -38,6 +38,7 @@ export interface SlashCommandMeta extends BaseCommandMeta {
 
 export interface OptionMeta extends APIApplicationCommandOptionBase<any> {
   resolver?: keyof OptionsResolvers;
+  skipRegistration?: boolean;
 }
 
 export class SlashCommandDiscovery extends CommandDiscovery<SlashCommandMeta> {
@@ -60,7 +61,11 @@ export class SlashCommandDiscovery extends CommandDiscovery<SlashCommandMeta> {
       return [...this.subcommands.values()].map(subcommand => subcommand.toJSON());
     }
 
-    return Object.values(this.getRawOptions()).map(option => ({ ...option, resolver: undefined }));
+    return Object.values(this.getRawOptions())
+      .filter(option => !option.skipRegistration)
+      .map(option => {
+        return { ...option, resolver: undefined };
+      });
   }
 
   execute(interaction: APIChatInputApplicationCommandInteraction | APIApplicationCommandAutocompleteInteraction, depth = 1): any {

@@ -3,7 +3,7 @@
     A collection of modules for creating <a href="https://discord.com/">Discord</a> bots using <a href="https://nestjs.com">NestJS</a>, based on <a href="https://github.com/discordjs/discord.js/tree/main/packages/core">@discordjs/core</a>, <a href="https://github.com/discordjs/discord.js/tree/main/packages/rest">@discordjs/rest</a>,  <a href="https://github.com/discordjs/discord.js/tree/main/packages/ws">@discordjs/ws</a>
     <br/>
     <p>
-        <a href="https://discord.gg/ZTapEzyD6G"><img src="https://img.shields.io/discord/222078108977594368?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
+        <a href="https://discord.gg/ZTapEzyD6G"><img src="https://img.shields.io/discord/1077051842615312496?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
 		<a href="https://www.npmjs.com/package/@djs-nest/core"><img src="https://img.shields.io/npm/v/@djs-nest/core.svg?maxAge=3600" alt="npm version" /></a>
 		<a href="https://www.npmjs.com/package/@djs-nest/core"><img src="https://img.shields.io/npm/dt/@djs-nest/core.svg?maxAge=3600" alt="npm downloads" /></a>
 		<a href="https://github.com/djs-nest/djs-nest/actions"><img src="https://github.com/djs-nest/djs-nest/actions/workflows/tests.yml/badge.svg" alt="Tests status" /></a>
