@@ -53,7 +53,6 @@
       "outputs": ["CHANGELOG.md"]
     },
     "release": {
-      "inputs": ["CHANGELOG.md"],
       "outputs": ["package.json", "CHANGELOG.md"]
     }
   }

@@ -31,7 +31,7 @@
     "format": "turbo run format --parallel",
     "format:affected": "turbo run format --filter='...[origin/main]' --parallel",
     "prepublish": "turbo run lint format:check build test:cov",
-    "publish-packages": "turbo run changelog release --concurrency=1",
+    "publish-packages": "turbo run release --concurrency=1",
     "postinstall": "husky install",
     "update": "yarn upgrade-interactive"
   },

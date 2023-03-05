@@ -11,9 +11,6 @@ All notable changes to this project will be documented in this file.
 
 - Adds value resolver for user, member, mentionable options ([0675c84](https://github.com/djs-nest/djs-nest/commit/0675c84b5379f1bee1930213675388eff86f2017))
 
-# Changelog
-All notable changes to this project will be documented in this file.
-
 # [@djs-nest/interaction@1.1.1](https://github.com/djs-nest/djs-nest/compare/@djs-nest/interaction@1.1.0...@djs-nest/interaction@1.1.1) - (2023-02-20)
 
 ## Bug Fixes
