@@ -61,7 +61,7 @@ export class CommandsService implements OnApplicationBootstrap {
       return;
     }
 
-    this.logger.log(`Started updating application commands for ${commandsByGuildMap.size - 1} guilds and global commands`);
+    this.logger.log(`Started updating application commands for global commands and ${commandsByGuildMap.size - 1} guild commands`);
     for (const [guild, commands] of commandsByGuildMap) {
       if (guild !== undefined) {
         this.logger.debug(`Updating application commands for guild ${guild}, ${commands.length} commands registered`);

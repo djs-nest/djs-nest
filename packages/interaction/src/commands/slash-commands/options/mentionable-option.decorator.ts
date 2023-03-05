@@ -5,3 +5,9 @@ export const MentionableOption = createOptionDecorator<APIApplicationCommandMent
   ApplicationCommandOptionType.Mentionable,
   'getMentionable'
 );
+
+export const MentionableValue = createOptionDecorator<APIApplicationCommandMentionableOption>(
+  ApplicationCommandOptionType.Mentionable,
+  'getMentionable',
+  true
+);
