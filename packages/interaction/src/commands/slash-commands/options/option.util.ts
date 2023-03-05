@@ -5,7 +5,11 @@ export type BaseOptionMeta = APIApplicationCommandOptionBase<any>;
 
 export type OptionMetaOmit<T extends BaseOptionMeta> = Omit<T, 'type'>;
 
-export function createOptionDecorator<T extends BaseOptionMeta>(type: ApplicationCommandOptionType, resolver: OptionMeta['resolver']) {
+export function createOptionDecorator<T extends BaseOptionMeta>(
+  type: ApplicationCommandOptionType,
+  resolver: OptionMeta['resolver'],
+  skipRegistration = false
+) {
   return (data: OptionMetaOmit<T>): PropertyDecorator => {
     return (target: any, propertyKey: string | symbol) => {
       Reflect.defineProperty(target, propertyKey, {
@@ -17,7 +21,8 @@ export function createOptionDecorator<T extends BaseOptionMeta>(type: Applicatio
       const meta: OptionMeta = {
         ...data,
         type,
-        resolver
+        resolver,
+        skipRegistration
       };
 
       Reflect.defineMetadata(DJS_OPTIONS_METADATA, meta, target, propertyKey);

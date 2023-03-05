@@ -24,11 +24,14 @@ import {
   DjsOptions,
   IntegerOption,
   MemberOption,
+  MemberValue,
   MentionableOption,
+  MentionableValue,
   NumberOption,
   RoleOption,
   StringOption,
-  UserOption
+  UserOption,
+  UserValue
 } from './options';
 import { SlashCommandsService } from './slash-commands.service';
 
@@ -55,8 +58,14 @@ class HelloDto {
   @MemberOption({ name: 'memberOption', description: 'member' })
   readonly memberOption: APIInteractionDataResolvedGuildMember | null;
 
+  @MemberValue({ name: 'memberOption', description: 'member' })
+  readonly memberValue: APIInteractionDataResolvedGuildMember | null;
+
   @UserOption({ name: 'userOption', description: 'user', required: true })
   readonly userOption: APIUser | null;
+
+  @UserValue({ name: 'userOption', description: 'user', required: true })
+  readonly userValue: APIUser | null;
 
   @ChannelOption({ name: 'channelOption', description: 'channel' })
   readonly channelOption: APIInteractionDataResolvedChannel | null;
@@ -66,6 +75,9 @@ class HelloDto {
 
   @MentionableOption({ name: 'mentionableOption', description: 'mentionable' })
   readonly mentionableOption: APIInteractionDataResolvedGuildMember | APIUser | APIRole | null;
+
+  @MentionableValue({ name: 'mentionableOption', description: 'mentionable' })
+  readonly mentionableValue: APIInteractionDataResolvedGuildMember | APIUser | APIRole | null;
 
   @AttachmentOption({ name: 'attachmentOption', description: 'attachment' })
   readonly attachmentOption: APIAttachment | null;
