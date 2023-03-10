@@ -11,7 +11,14 @@ import {
   InteractionType,
   MessageType
 } from '@discordjs/core';
-import { CommandOptionsResolver, DjsCommonModule, DjsContext, ExplorerService, SlashCommandInteractionContext } from '@djs-nest/common';
+import {
+  CommandOptionsResolver,
+  DjsCommonModule,
+  DjsContext,
+  ExplorerService,
+  MemberUser,
+  SlashCommandInteractionContext
+} from '@djs-nest/common';
 import { UseInterceptors } from '@nestjs/common';
 import { DiscoveryModule } from '@nestjs/core';
 import { Test, TestingModule } from '@nestjs/testing';
@@ -24,6 +31,7 @@ import {
   DjsOptions,
   IntegerOption,
   MemberOption,
+  MemberUserOption,
   MemberValue,
   MentionableOption,
   MentionableValue,
@@ -60,6 +68,9 @@ class HelloDto {
 
   @MemberValue({ name: 'memberOption', description: 'member' })
   readonly memberValue: APIInteractionDataResolvedGuildMember | null;
+
+  @MemberUserOption({ name: 'memberOption', description: 'member' })
+  readonly memberUserValue: MemberUser | null;
 
   @UserOption({ name: 'userOption', description: 'user', required: true })
   readonly userOption: APIUser | null;

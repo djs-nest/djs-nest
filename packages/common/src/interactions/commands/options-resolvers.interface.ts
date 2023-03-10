@@ -7,6 +7,7 @@ import {
   APIUser,
   ChannelType
 } from '@discordjs/core';
+import { MemberUser } from './member-user.interface';
 
 export interface OptionsResolvers {
   getNumber(name: string, required?: boolean): number | null;
@@ -22,6 +23,8 @@ export interface OptionsResolvers {
   getMember(name: string): APIInteractionDataResolvedGuildMember | null;
 
   getUser(name: string, required?: boolean): APIUser | null;
+
+  getMemberUser(name: string, required?: boolean): MemberUser | null;
 
   getRole(name: string, required?: boolean): APIRole | null;
 

@@ -730,6 +730,7 @@ __metadata:
   resolution: "@djs-nest/core@workspace:packages/core"
   dependencies:
     "@discordjs/core": ^0.3.0
+    "@discordjs/rest": ^1.5.0
     "@discordjs/ws": ^0.6.0
     "@djs-nest/common": "workspace:^"
     "@djs-nest/rest": "workspace:^"
@@ -755,6 +756,10 @@ __metadata:
     "@discordjs/core": ^0.3.0
     "@discordjs/ws": ^0.6.0
     "@nestjs/common": ^9.0.0
+    "@nestjs/core": ^9.0.0
+  dependenciesMeta:
+    "@discordjs/rest":
+      optional: true
   languageName: unknown
   linkType: soft
 

@@ -21,6 +21,7 @@ import {
   ChannelType
 } from '@discordjs/core';
 import { isFocusableOption } from '../utils';
+import { MemberUser } from './member-user.interface';
 import { OptionsResolvers } from './options-resolvers.interface';
 
 export class CommandOptionsResolver implements OptionsResolvers {
@@ -222,6 +223,18 @@ export class CommandOptionsResolver implements OptionsResolvers {
       required
     ) as APIApplicationCommandInteractionDataUserOption;
     return !option?.value ? null : this.resolved?.users[option.value] ?? null;
+  }
+
+  /**
+   * Gets a member and user option.
+   * @param {string} name The name of the option.
+   * @param {boolean} [required=false] Whether to throw an error if the option is not found.
+   * @returns {?APIUser} The value of the option, or null if not set and not required.
+   */
+  getMemberUser(name: string, required = false): MemberUser | null {
+    const member = this.getMember(name);
+    const user = this.getUser(name, required);
+    return !member && !user ? null : { member, user };
   }
 
   /**

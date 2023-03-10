@@ -3,6 +3,7 @@ export * from './boolean-option.decorator';
 export * from './channel-option.decorator';
 export * from './integer-option.decorator';
 export * from './member-option.decorator';
+export * from './member-user-option.decorator';
 export * from './mentionable-option.decorator';
 export * from './number-option.decorator';
 export * from './role-option.decorator';

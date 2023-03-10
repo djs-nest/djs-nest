@@ -45,7 +45,11 @@
   "peerDependencies": {
     "@discordjs/core": "^0.3.0",
     "@discordjs/ws": "^0.6.0",
-    "@nestjs/common": "^9.0.0"
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/core": "^9.0.0"
+  },
+  "optionalDependencies": {
+    "@discordjs/rest": "^1.5.0"
   },
   "devDependencies": {
     "@discordjs/core": "^0.3.0",
