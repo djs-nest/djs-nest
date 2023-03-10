@@ -45,7 +45,7 @@
     "@nestjs/common": "^9.0.0"
   },
   "devDependencies": {
-    "@favware/cliff-jumper": "^1.10.0",
+    "@favware/cliff-jumper": "^2.0.0",
     "@golevelup/ts-jest": "^0.3.5",
     "@nestjs/common": "^9.3.9",
     "@nestjs/core": "^9.3.9",
