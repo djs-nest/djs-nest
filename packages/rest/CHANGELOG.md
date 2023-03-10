@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# Changelog
+All notable changes to this project will be documented in this file.
+
 # [@djs-nest/rest@1.1.1](https://github.com/djs-nest/djs-nest/compare/@djs-nest/rest@1.1.0...@djs-nest/rest@1.1.1) - (2023-02-20)
 
 ## Bug Fixes
