@@ -1,0 +1,9 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+# [@djs-nest/common@1.2.0](https://github.com/djs-nest/djs-nest/compare/@djs-nest/common@1.1.2...@djs-nest/common@1.2.0) - (2023-03-10)
+
+## Features
+
+- Add @MemberUserOption decorator ([12a2947](https://github.com/djs-nest/djs-nest/commit/12a29479e2a7b71e5d9121ec3a9775fee57b9cd7))
+
