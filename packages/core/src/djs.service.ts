@@ -1,4 +1,4 @@
-import { createClient } from '@discordjs/core';
+import { Client } from '@discordjs/core';
 import { REST } from '@discordjs/rest';
 import { WebSocketManager, WebSocketShardEvents } from '@discordjs/ws';
 import { Injectable, Logger, OnApplicationBootstrap, OnApplicationShutdown } from '@nestjs/common';
@@ -11,7 +11,7 @@ export class DjsService implements OnApplicationBootstrap, OnApplicationShutdown
   private readonly _client: DjsClient;
 
   constructor(rest: REST, private ws: WebSocketManager) {
-    this._client = createClient({ rest, ws });
+    this._client = new Client({ rest, ws });
     this.ws.on(WebSocketShardEvents.Closed, ({ code }) => {
       this.logger.log(`WebSocket Closed with ${code} code`);
     });

@@ -44,14 +44,14 @@
     "@djs-nest/rest": "workspace:^"
   },
   "peerDependencies": {
-    "@discordjs/core": "^0.3.0",
+    "@discordjs/core": "^0.4.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
     "@discordjs/builders": "^1.5.0",
-    "@discordjs/core": "^0.3.0",
+    "@discordjs/core": "^0.4.0",
     "@favware/cliff-jumper": "^2.0.0",
     "@nestjs/common": "^9.3.9",
     "@nestjs/core": "^9.3.9",
