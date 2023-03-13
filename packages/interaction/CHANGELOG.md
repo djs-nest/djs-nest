@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# [@djs-nest/interaction@1.4.0](https://github.com/djs-nest/djs-nest/compare/@djs-nest/interaction@1.3.0...@djs-nest/interaction@1.4.0) - (2023-03-13)
+
+## Features
+
+- Update discordjs dependencies ([69abc37](https://github.com/djs-nest/djs-nest/commit/69abc370f55f6218c1c5ce1c1c8f33f2774f7c60))
+
 # [@djs-nest/interaction@1.3.0](https://github.com/djs-nest/djs-nest/compare/@djs-nest/interaction@1.2.0...@djs-nest/interaction@1.3.0) - (2023-03-10)
 
 ## Features
