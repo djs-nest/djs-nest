@@ -49,7 +49,7 @@
     "@nestjs/core": "^9.0.0"
   },
   "optionalDependencies": {
-    "@discordjs/rest": "^1.5.0"
+    "@discordjs/rest": "^1.6.0"
   },
   "devDependencies": {
     "@discordjs/core": "^0.3.0",

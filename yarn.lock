@@ -644,6 +644,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@discordjs/collection@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@discordjs/collection@npm:1.4.0"
+  checksum: fb6da43b3df8eeade104490a024918cb58690db58ef8bdc2e2812ffee7e166c9baae0c244306a8187179ffa17cab679dcd50ea7fde9bf137c76275a608acd6b3
+  languageName: node
+  linkType: hard
+
 "@discordjs/core@npm:^0.3.0":
   version: 0.3.0
   resolution: "@discordjs/core@npm:0.3.0"
@@ -678,6 +685,22 @@ __metadata:
     tslib: ^2.4.1
     undici: ^5.13.0
   checksum: 98b3a97fa3dbecd406cefca5e5245d51a1ab9eb748001f9d128065cc6dd6f61cc23efbdfa11e84e5147131fe40239d23c37b503d8c4c1a40b10d67b4c5b255ef
+  languageName: node
+  linkType: hard
+
+"@discordjs/rest@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@discordjs/rest@npm:1.6.0"
+  dependencies:
+    "@discordjs/collection": ^1.4.0
+    "@discordjs/util": ^0.2.0
+    "@sapphire/async-queue": ^1.5.0
+    "@sapphire/snowflake": ^3.4.0
+    discord-api-types: ^0.37.35
+    file-type: ^18.2.1
+    tslib: ^2.5.0
+    undici: ^5.20.0
+  checksum: 4370919696401b052602b34bc0a421811efb1360eed7f904206e20216cba052a63bf08e0307222523f8c5d8066b08264ae95a8037b2e86969cffba68e18aaefe
   languageName: node
   linkType: hard
 
@@ -747,7 +770,7 @@ __metadata:
   resolution: "@djs-nest/core@workspace:packages/core"
   dependencies:
     "@discordjs/core": ^0.3.0
-    "@discordjs/rest": ^1.5.0
+    "@discordjs/rest": ^1.6.0
     "@discordjs/ws": ^0.6.0
     "@djs-nest/common": "workspace:^"
     "@djs-nest/rest": "workspace:^"
@@ -849,7 +872,7 @@ __metadata:
   resolution: "@djs-nest/rest@workspace:packages/rest"
   dependencies:
     "@discordjs/core": ^0.3.0
-    "@discordjs/rest": ^1.5.0
+    "@discordjs/rest": ^1.6.0
     "@djs-nest/common": "workspace:^"
     "@favware/cliff-jumper": ^2.0.0
     "@nestjs/common": ^9.3.9
@@ -871,7 +894,7 @@ __metadata:
     typescript: ^4.9.5
   peerDependencies:
     "@discordjs/core": ^0.3.0
-    "@discordjs/rest": ^1.5.0
+    "@discordjs/rest": ^1.6.0
     "@nestjs/common": ^9.0.0
     "@nestjs/core": ^9.0.0
   languageName: unknown
@@ -1680,6 +1703,13 @@ __metadata:
   version: 3.3.0
   resolution: "@sapphire/snowflake@npm:3.3.0"
   checksum: 122bbe325d596d670650c5c037d7f80a85a280ef5d5170dcb11030252773defa0df76277bcd28e663abe9c206310dcc596e3be32666fc6c53dede2798c3109da
+  languageName: node
+  linkType: hard
+
+"@sapphire/snowflake@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "@sapphire/snowflake@npm:3.4.0"
+  checksum: 556b7001f33d6edbbbcbca46f6abfa56c732a29e78b693161e358688e688edcb012d2c1bc944e7ffb41bd6c9950d261bc73f95656dc01643361a218b4f5ab985
   languageName: node
   linkType: hard
 
@@ -3787,6 +3817,17 @@ __metadata:
     strtok3: ^7.0.0
     token-types: ^5.0.1
   checksum: 67f5a927b8030e35a4faf9dd9dea9e17bcb042fb61b9851b7dd1b1b3bb3ecfdd9f83bc3bc72686316ea2bac70df652c61e10affa9b5957b1a3d731df4925e3cb
+  languageName: node
+  linkType: hard
+
+"file-type@npm:^18.2.1":
+  version: 18.2.1
+  resolution: "file-type@npm:18.2.1"
+  dependencies:
+    readable-web-to-node-stream: ^3.0.2
+    strtok3: ^7.0.0
+    token-types: ^5.0.1
+  checksum: bbc9381292e96a72ecd892f9f5e1a9a8d3f9717955841346e55891acfe099135bfa149f7dad51f35ee52b5e7e0a1a02d7375061b2800758011682c2e9d96953e
   languageName: node
   linkType: hard
 
@@ -7468,7 +7509,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^5.13.0":
+"undici@npm:^5.13.0, undici@npm:^5.20.0":
   version: 5.20.0
   resolution: "undici@npm:5.20.0"
   dependencies:
